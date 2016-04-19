@@ -1,11 +1,11 @@
-CakePHP 2.x SMS Global Datasource
+# CakePHP 2.x SMS Global Datasource
 
 A datasource allowing interaction between the SMS Global API.
 
-# INSTALLATION
+## INSTALLATION
 Copy SmsGlobalSource.php into the app/Model/Datasource directory.
 
-# CONFIGURATION
+## CONFIGURATION
 
 Within `database.php` add:
 ```
@@ -20,14 +20,14 @@ Within your `Model` add:
 	public $useDbConfig = 'smsGlobal';
 	public $useTable = false;
 ```
-# USAGE
+## USAGE
 Making a specific call to an function within the Sms Global wsdl can be done by:
 
 ```
 $this->Model->apiGetInterface(array('ticket' => $this->Model->getTicketId()));
 ```
 
-# Explained
+## Explained
 ```
 $this->Model->{APINAME}({REQUIRED PARAMS});
 ```
@@ -49,7 +49,7 @@ $this->Model->sendSms($data);
 
 If a response is `FALSE` make a call to `$this->Model->getError();` an error may exist.
 
-# NOTE
+## NOTE
 Refer to the documentation and wsdl as to what parameters are required per call.
 + http://www.smsglobal.com/docs/SOAP.pdf
 + http://www.smsglobal.com/mobileworks/soapserver.php?wsdl
